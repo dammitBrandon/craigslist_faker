@@ -17,6 +17,9 @@ gem 'rake'
 
 gem 'shotgun'
 
+#used to create foreign keys
+gem 'foreigner'
+
 group :test do
   gem 'faker'
   gem 'rspec'

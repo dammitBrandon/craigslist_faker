@@ -5,6 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.text   :description
       t.string :price
       t.string :email
+      t.string :category_type
 
       t.timestamps
     end

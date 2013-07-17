@@ -1,0 +1,10 @@
+<div class="container">
+  <section class="wrapper">
+    <h1>Categories</h1>
+    <nav id="categories">
+    <% @categories.each do |category| %>
+    <li><a href="#category_name_here"><%= category %></a></li>
+    <% end %>
+    </nav>
+  </section>
+</div>

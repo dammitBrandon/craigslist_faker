@@ -1,0 +1,22 @@
+<div class="container">
+  <section class="wrapper">
+    <form action="/" method="POST" id="create_category">
+      <label for="category_name">Category Name:</label>
+      <input id="category_name" type="text" name="post[:name]" placeholder="Name of Category" required/>
+      <br>
+
+      <label for="category_type">Choose a Category:</label> <br>
+     <!-- <input type="radio" id="category_name" name="post[:category_type]" value="Electronics"/>Electronics <br> -->
+     <!-- <input type="radio" id="category_name" name="post[:category_type]" value="Autos"/>Autos <br> -->
+     <!-- <input type="radio" id="category_name" name="post[:category_type]" value="Services"/>Services <br> -->
+     <!-- <input type="radio" id="category_name" name="post[:category_type]" value="Forums"/>Forums <br> -->
+      <% @categories.each do |category| %>
+      <input type="radio" id="category_name" name="post[:category_type]" value="<%=category.category_name.downcase%>"/><%=category.category_name%><br>
+      <button name="button">Submit Post</button>
+    </form>
+  </section>
+</div>
+
+      <% @categories.each do |category| %>
+      <input type="radio" id="category_name" name="post[:category_type]" value="<%=category.category_name.downcase%>"/><%=category.category_name%><br>
+      <% end %>

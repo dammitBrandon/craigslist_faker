@@ -10,14 +10,17 @@
       <label for="post_price">Post Price:</label>
       <input id="post_price" type="text" name="post[:price]" placeholder="The price of the item"/>
       <br>
-      <label for="post_email">Post Price:</label>
+      <label for="post_email">Contact Email:</label>
       <input id="post_email" type="text" name="post[:email]" placeholder="Enter a email address"/>
       <br>
       <label for="category_type">Choose a Category:</label> <br>
-      <input type="radio" id="category_name" name="post[:category_type]" value="Electronics"/>Electronics <br>
-      <input type="radio" id="category_name" name="post[:category_type]" value="Autos"/>Autos <br>
-      <input type="radio" id="category_name" name="post[:category_type]" value="Services"/>Services <br>
-      <input type="radio" id="category_name" name="post[:category_type]" value="Forums"/>Forums <br>
+      <!-- <input type="radio" id="category_name" name="post[:category_type]" value="Electronics"/>Electronics <br> -->
+      <!-- <input type="radio" id="category_name" name="post[:category_type]" value="Autos"/>Autos <br> -->
+      <!-- <input type="radio" id="category_name" name="post[:category_type]" value="Services"/>Services <br> -->
+      <!-- <input type="radio" id="category_name" name="post[:category_type]" value="Forums"/>Forums <br> -->
+      <% @categories.each do |category| %>
+      <input type="radio" id="category_name" name="post[:category_type]" value="<%=category.category_name.downcase%>"/><%=category.category_name%><br>
+      <% end %>
       <button name="button">Submit Post</button>
     </form>
   </section>

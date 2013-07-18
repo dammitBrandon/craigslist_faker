@@ -3,8 +3,13 @@
     <h1>Categories</h1>
     <nav id="categories">
     <% @categories.each do |category| %>
-    <li><a href="#category_name_here"><%= category %></a></li>
+    <li><a href="#category_name_here"><%= category.category_name %></a></li>
     <% end %>
     </nav>
+
+  <section>
+    <lable name="add-category" id="add-category">
+    <p name="add-category">If you are a member you can also <a href="#addcategory">add a category</a> if you dont see a category that fits your post.</p>
+  </section>
   </section>
 </div>
